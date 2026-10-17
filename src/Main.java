@@ -3,13 +3,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-/** Ponto de entrada: demonstra as acoes do sistema em um menu simples. */
 public final class Main {
     public static void main(String[] args) {
         try (ServidorAtualizacoes servidor = new ServidorAtualizacoes()) {
             servidor.iniciar();
 
-            // Objetos de exemplo: uma TV comprada e ainda na versao 1.0.0.
             Software software = new Software("SmartOS", Versao.interpretar("1.0.0"));
             Televisao tv = new Televisao("UNI TV 43", "TV-0001", software);
             GerenciadorAtualizacoes gerenciador =

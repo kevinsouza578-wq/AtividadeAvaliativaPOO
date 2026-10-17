@@ -8,9 +8,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-/** Simula o site da fabricante com catalogo e links HTTP de download.
- *  So usa 127.0.0.1, entao funciona sem internet externa.
- */
 public final class ServidorAtualizacoes implements AutoCloseable {
     private final HttpServer servidor;
     private final Map<String, byte[]> arquivos = new LinkedHashMap<String, byte[]>();
@@ -20,7 +17,6 @@ public final class ServidorAtualizacoes implements AutoCloseable {
         adicionar("1.1.0", "Correcao de vulnerabilidade de autenticacao");
         adicionar("1.2.0", "Reforco de seguranca e correcoes adicionais");
 
-        // Porta 0 solicita ao sistema operacional uma porta local livre.
         servidor = HttpServer.create(new InetSocketAddress("127.0.0.1", 0), 0);
         servidor.createContext("/catalogo", new HttpHandler() {
             public void handle(HttpExchange troca) throws IOException {
@@ -52,7 +48,6 @@ public final class ServidorAtualizacoes implements AutoCloseable {
     }
 
     private void adicionar(String versao, String descricao) {
-        // Arquivo didatico: representa um firmware, mas NAO e firmware real.
         String conteudo = "PACOTE DIDATICO - SMART TV\nVersao: " + versao
                 + "\nAlteracoes: " + descricao + "\n";
         arquivos.put(versao, conteudo.getBytes(StandardCharsets.UTF_8));

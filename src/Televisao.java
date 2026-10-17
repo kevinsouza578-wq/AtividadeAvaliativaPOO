@@ -1,4 +1,3 @@
-/** Heranca de Dispositivo + composicao: a TV possui um Software. */
 public final class Televisao extends Dispositivo {
     private final Software software;
 

@@ -11,7 +11,6 @@ import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Classe utilitaria que consulta, baixa e instala atualizacoes. */
 public final class GerenciadorAtualizacoes {
     private final String urlBase;
     private final Path pastaDownloads;

@@ -1,4 +1,3 @@
-/** Dados sobre um pacote disponibilizado pela fabricante. */
 public final class PacoteAtualizacao {
     private final Versao versao;
     private final String descricao;

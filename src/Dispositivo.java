@@ -1,4 +1,3 @@
-/** Abstracao: comportamento e dados comuns aos dispositivos da fabricante. */
 public abstract class Dispositivo {
     private final String modelo;
     private final String numeroSerie;

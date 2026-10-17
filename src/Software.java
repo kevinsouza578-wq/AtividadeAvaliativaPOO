@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/** Guarda o software instalado e o historico de versoes da TV. */
 public final class Software {
     private final String nome;
     private Versao versaoInstalada;

@@ -1,6 +1,5 @@
 import java.util.Objects;
 
-/** Representa uma versao no formato maior.menor.correcao, por exemplo 1.2.0. */
 public final class Versao implements Comparable<Versao> {
     private final int maior;
     private final int menor;
